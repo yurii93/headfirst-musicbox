@@ -48,7 +48,7 @@ public class BeatBoxFinal {  // implements MetaEventListener
       }
 	  
 	  public static String getClientName(String[] args) {
-		  return (args.length != 0 && args[0].trim().length() != 0) ? args[0] : UUID.randomUUID().toString().;
+		  return (args.length != 0 && args[0].trim().length() != 0) ? args[0] : UUID.randomUUID().toString();
 	  }
       
       public void startUp(String name) {
@@ -237,7 +237,7 @@ public class BeatBoxFinal {  // implements MetaEventListener
           }
 
          try {
-             out.writeObject(userName + nextNum++ + ": " + userMessage.getText());
+             out.writeObject(userName + ": " + userMessage.getText());
             out.writeObject(checkboxState);
          } catch(Exception ex) {
              ex.printStackTrace();
